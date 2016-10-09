@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>BluePill</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">
+
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #f0f0f0;
+				margin: 0px;
+				overflow: hidden;
+			}
+			#video-feed {
+				position:fixed;
+				z-index: 100;
+				top:100;
+				left:200;
+			}
+			#analyser { 
+				display: inline-block; 
+				background: black; 
+				box-shadow: 0px 0px 10px blue;
+			}
+			#viz {
+				position:fixed;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+			}
+			#container {
+				z-index: -1;
+				top:0;
+				left:0;
+			}
+		</style>
+	</head>
+	<body>
+
+		<script src="js/Stats.js"></script>
+  		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+		<img id="video-feed" src="/video_feed" width="800" height="600">			
+		<video id="video" autoplay loop webkit-playsinline style="display:none">
+		</video>
+		
+		<script>
+		$( function() {
+			$( "#video-feed" ).draggable();
+		    $( "#video-feed" ).resizable();
+		} );
+		
+		</script>
+	</body>
+</html>
