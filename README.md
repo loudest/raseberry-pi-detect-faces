@@ -9,7 +9,7 @@ python server/main.py
 
 We made use of:
 - [Python]
-- [Machine Learning] - haarcascades video ML recogniation
+- [Machine Learning] - haarcascades video ML recognition
 - [Twilio]
 
 Our code is licensed under the [MIT License](LICENSE.md).
